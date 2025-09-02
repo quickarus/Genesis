@@ -3,21 +3,29 @@ import HeroSection from '@/components/hero-section'
 import StatisticsSection from '@/components/statistics-section'
 import AboutSection from '@/components/about-section'
 import TeamSection from '@/components/team-section'
-import ServicesSection from '@/components/services-section'
-import QuoteSection from '@/components/quote-section'
-import Footer from '@/components/footer'
+import ProductsServicesSection from '@/components/products-services-section'
+import ApuSection from '@/components/apu-section'
+import QuoteFormSection from '@/components/quote-form-section'
+import FooterSection from '@/components/footer-section'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Header />
-      <HeroSection />
-      <StatisticsSection />
-      <AboutSection />
-      <TeamSection />
-      <ServicesSection />
-      <QuoteSection />
-      <Footer />
-    </main>
-  )
+    <div className="relative">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+      <main className="relative bg-black text-white">
+        <div className="relative -mt-[72px]"> {/* Adjust this value based on your header height */}
+          <HeroSection />
+        </div>
+        <StatisticsSection />
+        <AboutSection />
+        <ProductsServicesSection />
+        <TeamSection />
+        <ApuSection />
+        <QuoteFormSection />
+        <FooterSection />
+      </main>
+    </div>
+  );
 }
