@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['placekitten.com'],
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif'],
   },
 }
 
