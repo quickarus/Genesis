@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: false,
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true,
   },
+  // GitHub Pages serves from a subdirectory, so we need to handle asset paths
+  basePath: process.env.NODE_ENV === 'production' ? '/Genesis' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Genesis' : '',
 }
 
 module.exports = nextConfig

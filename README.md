@@ -122,17 +122,26 @@ Some content uses placeholders where original assets weren't available:
 
 ## Build and Deploy
 
+### For GitHub Pages (Automatic)
+
+This repository is configured for automatic deployment to GitHub Pages:
+
+1. **Push to main branch** - The site will automatically build and deploy
+2. **Access your site** at: `https://yourusername.github.io/Genesis`
+
+### Manual Build
+
 1. **Build for production**:
    ```bash
    npm run build
    ```
 
-2. **Start production server**:
+2. **Deploy to GitHub Pages**:
    ```bash
-   npm start
+   npm run deploy
    ```
 
-The application is ready for deployment on platforms like Vercel, Netlify, or any Node.js hosting service.
+The application is ready for deployment on GitHub Pages, Vercel, Netlify, or any static hosting service.
 
 ## Browser Support
 
