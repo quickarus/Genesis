@@ -19,7 +19,7 @@ export default function StatisticsSection() {
   ]
 
   return (
-    <section className="px-15 py-10 bg-black">
+    <section className="px-15 py-5 bg-black">
       <div className="flex items-center justify-between gap-10 px-15 py-10 max-w-screen-xl mx-auto">
         {stats.map((stat, index) => (
           <div

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function QuoteFormSection() {
   return (
-    <section className="relative flex items-center justify-center gap-15 px-15 py-2.5 w-full h-[734px] bg-black">
+    <section id="quote" className="relative flex items-center justify-center gap-15 px-15 py-2.5 w-full h-[734px] bg-black">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -10,7 +10,7 @@ export default function QuoteFormSection() {
           alt="Aircraft Hangar"
           width={1440}
           height={960}
-          className="absolute top-[-226px] left-0 w-full h-[960px] object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
         />
       </div>
       
@@ -21,7 +21,7 @@ export default function QuoteFormSection() {
       <div className="relative z-10 flex flex-col items-center gap-5 p-10 w-[600px] h-[640px] bg-[#444444] border border-[#676767] rounded-xl shadow-[0px_4px_4px_rgba(0,0,0,0.5)]">
         <h2 className="text-3xl font-bold text-white">Quote Request</h2>
         
-        <div className="flex flex-col gap-5 w-full">
+        <div className="flex flex-col gap-5 w-full items-center">
           <div className="w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
             <input
               type="text"

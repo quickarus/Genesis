@@ -19,10 +19,10 @@ export default function Home() {
           <HeroSection />
         </div>
         <StatisticsSection />
+        <ApuSection />
         <AboutSection />
         <ProductsServicesSection />
         <TeamSection />
-        <ApuSection />
         <QuoteFormSection />
         <FooterSection />
       </main>

@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function TeamSection() {
   return (
-    <section className="flex flex-col items-center gap-12 py-0 px-55 w-[1100px] mx-auto bg-black pb-[32rem]">
-      <h2 className="text-3xl font-bold text-[#10BEF2] text-center w-full">
+    <section id="about" className="flex flex-col items-center gap-12 py-20 px-55 w-[1100px] mx-auto bg-black pb-[32rem]">
+      <h2 className="text-3xl font-bold text-[#10BEF2] text-center w-full mt-16">
         Meet Our Team
       </h2>
       <div className="relative">
@@ -17,7 +17,7 @@ export default function TeamSection() {
             priority
           />
         </div>
-        <div className="absolute top-[65%] left-[5%] right-[5%] bg-[#444444]/70 backdrop-blur-sm p-8 rounded-lg">
+        <div className="absolute top-[75%] left-[5%] right-[5%] bg-[#444444]/70 backdrop-blur-sm p-8 rounded-lg">
           <div className="text-white space-y-6">
             <p className="text-lg">
               Genesis is a premier supplier in the commercial aviation industry. We specialize in inventory solutions to the worldwide aviation marketplace. With over 50 years combined experience in aircraft maintenance, finance solutions, and asset management, our team prides itself in our commitment to integrity, flexibility, and quality of work.

@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center bg-black overflow-hidden">
+    <section className="relative w-full h-[80vh] min-h-[500px] flex items-center justify-center bg-black overflow-hidden">
       {/* World Map Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute top-[-4px] left-[-530px] w-[2500px] h-[857px]">
+        <div className="absolute top-[100px] left-[-100px] w-[2500px] h-[857px]">
           <Image
             src="/assets/images/world.svg"
             alt="World Map"

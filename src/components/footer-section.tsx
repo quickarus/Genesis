@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 export default function FooterSection() {
   return (
-    <footer className="flex items-start justify-between p-5 w-full h-[200px] bg-black">
+    <footer className="flex items-start justify-between p-5 w-full min-h-[240px] bg-black">
       {/* Contact Info Section */}
-      <div className="flex flex-col gap-2 p-2.5 w-[401px] h-40">
+      <div className="flex flex-col gap-2 p-2.5 w-[401px] h-auto">
         <div className="w-[196px] h-[59px]">
           <Image
             src="/assets/logos/FinalLogo_JPG.jpg"
@@ -30,7 +30,7 @@ export default function FooterSection() {
       </div>
 
       {/* Navigation Section */}
-      <div className="flex flex-col gap-2 p-2.5 w-[200px] h-40">
+      <div className="flex flex-col gap-2 p-2.5 w-[200px] h-auto">
         <div className="text-base font-bold text-[#10BEF2]">Navigation</div>
         <div className="text-base text-white">Home</div>
         <div className="text-base text-white">About</div>
@@ -40,7 +40,7 @@ export default function FooterSection() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="flex flex-col gap-3 p-2.5 w-80 h-40">
+      <div className="flex flex-col gap-3 p-2.5 w-80 h-auto">
         <div className="flex items-center gap-2 p-2.5 w-[280px] h-10">
           <div className="w-45 h-8 bg-white flex items-center">
             <div className="text-sm text-[#999999] px-4">Email</div>
