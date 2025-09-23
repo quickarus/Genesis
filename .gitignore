@@ -105,3 +105,4 @@ jspm_packages/
 *.so
 *.dll
 *.exe
+node_modules
