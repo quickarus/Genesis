@@ -3,47 +3,47 @@ import Image from 'next/image'
 export default function ProductsServicesSection() {
   const services = [
     {
-      icon: "/Genesis Aircraft Parts/icons/apu-fleet.svg",
+      icon: "/icons/apu-fleet.svg",
       title: "Purchasing",
       id: "purchasing"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/supply-chain.svg", 
+      icon: "/icons/supply-chain.svg", 
       title: "Leases",
       id: "leases"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/repair.svg",
+      icon: "/icons/component-sales.svg",
       title: "Component Sales", 
       id: "component-sales"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/inventory.svg",
+      icon: "/icons/inventory.svg",
       title: "Supply Chain Management",
       id: "supply-chain"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/exchanges.svg",
+      icon: "/icons/exchanges.svg",
       title: "Exchanges",
       id: "exchanges"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/leasing.svg",
+      icon: "/icons/leasing.svg",
       title: "APU Sales",
       id: "apu-sales"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/financing.svg",
+      icon: "/icons/repair.svg",
       title: "Repair Management",
       id: "repair-management"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/consulting.svg",
+      icon: "/icons/consulting.svg",
       title: "APU Fleet Management",
       id: "apu-fleet"
     },
     {
-      icon: "/Genesis Aircraft Parts/icons/consignment.svg",
+      icon: "/icons/consignment.svg",
       title: "Consulting",
       id: "consulting"
     }
