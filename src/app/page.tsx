@@ -15,7 +15,7 @@ export default function Home() {
         <Header />
       </div>
       <main className="relative bg-black text-white">
-        <div className="relative -mt-[72px]"> {/* Adjust this value based on your header height */}
+        <div className="relative -mt-[72px] md:-mt-[72px] sm:-mt-[60px]"> {/* Responsive header height adjustment */}
           <HeroSection />
         </div>
         <StatisticsSection />

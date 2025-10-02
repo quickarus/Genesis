@@ -1,60 +1,61 @@
 import Image from 'next/image'
+import { getAssetPath } from '@/lib/utils'
 
 export default function ProductsServicesSection() {
   const services = [
     {
-      icon: "/icons/apu-fleet.svg",
+      icon: getAssetPath("/icons/apu-fleet.svg"),
       title: "Purchasing",
       id: "purchasing"
     },
     {
-      icon: "/icons/supply-chain.svg", 
+      icon: getAssetPath("/icons/supply-chain.svg"), 
       title: "Leases",
       id: "leases"
     },
     {
-      icon: "/icons/component-sales.svg",
+      icon: getAssetPath("/icons/component-sales.svg"),
       title: "Component Sales", 
       id: "component-sales"
     },
     {
-      icon: "/icons/inventory.svg",
+      icon: getAssetPath("/icons/inventory.svg"),
       title: "Supply Chain Management",
       id: "supply-chain"
     },
     {
-      icon: "/icons/exchanges.svg",
+      icon: getAssetPath("/icons/exchanges.svg"),
       title: "Exchanges",
       id: "exchanges"
     },
     {
-      icon: "/icons/leasing.svg",
+      icon: getAssetPath("/icons/leasing.svg"),
       title: "APU Sales",
       id: "apu-sales"
     },
     {
-      icon: "/icons/repair.svg",
+      icon: getAssetPath("/icons/repair.svg"),
       title: "Repair Management",
       id: "repair-management"
     },
     {
-      icon: "/icons/consulting.svg",
+      icon: getAssetPath("/icons/consulting.svg"),
       title: "APU Fleet Management",
       id: "apu-fleet"
     },
     {
-      icon: "/icons/consignment.svg",
+      icon: getAssetPath("/icons/consignment.svg"),
       title: "Consulting",
       id: "consulting"
     }
   ]
 
   return (
-    <section id="services" className="relative flex flex-col items-center justify-center gap-10 px-15 py-20 w-full">
+    <section id="services" className="relative flex flex-col items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 lg:px-15 py-12 sm:py-20 w-full">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/iStock-621838358.jpg"
+          src={getAssetPath("/assets/images/iStock-621838358.jpg")}
           alt="iStock Background"
           fill
           className="object-cover"
@@ -64,13 +65,13 @@ export default function ProductsServicesSection() {
       </div>
 
       {/* Content Container with Background */}
-      <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/60 backdrop-blur-sm rounded-lg p-10">
-        <div className="flex flex-col items-center gap-10 w-full">
-          <h2 className="text-3xl font-bold text-[#10BEF2] text-center">
+      <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/60 backdrop-blur-sm rounded-lg p-4 sm:p-6 lg:p-10 mx-4">
+        <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-10 w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center">
             Our Products & Services
           </h2>
           
-          <div className="grid grid-cols-2 gap-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
             {services.slice(0, 8).map((service, index) => (
               <div key={service.id} className="flex flex-col gap-2 items-center">
                 <div className="flex items-center gap-2.5 p-2.5 w-fit bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
@@ -85,12 +86,12 @@ export default function ProductsServicesSection() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-3 w-full bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-[20px]">
-                  <span className="text-lg font-bold text-white">
+                  <span className="text-sm sm:text-base lg:text-lg font-bold text-white">
                     {service.title}
                   </span>
                   <div className="w-7 h-7">
                     <Image
-                      src="/Genesis Aircraft Parts/icons/component-sales.svg"
+                      src={getAssetPath("/icons/component-sales.svg")}
                       alt="Chevron"
                       width={30}
                       height={30}
@@ -103,7 +104,7 @@ export default function ProductsServicesSection() {
           </div>
 
           {/* Consulting (9th item) */}
-          <div className="flex flex-col gap-2 w-[474px] items-center">
+          <div className="flex flex-col gap-2 w-full max-w-[474px] items-center mx-auto">
             <div className="flex items-center gap-2.5 p-2.5 w-fit bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
               <div className="w-7 h-7">
                 <Image
@@ -116,12 +117,12 @@ export default function ProductsServicesSection() {
               </div>
             </div>
             <div className="flex items-center justify-between p-3 w-full bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-[20px]">
-              <span className="text-lg font-bold text-white">
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-white">
                 {services[8].title}
               </span>
               <div className="w-7 h-7">
                 <Image
-                  src="/Genesis Aircraft Parts/icons/component-sales.svg"
+                  src={getAssetPath("/icons/component-sales.svg")}
                   alt="Chevron"
                   width={30}
                   height={30}
@@ -132,13 +133,13 @@ export default function ProductsServicesSection() {
           </div>
 
           {/* AeroXchange Logo */}
-          <div className="w-[211px] h-[146px] mt-4">
+          <div className="w-[150px] sm:w-[180px] lg:w-[211px] h-auto mt-4">
             <Image
-              src="/assets/images/Aeroxchange422x292_2 1.png"
+              src={getAssetPath("/assets/images/Aeroxchange422x292_2 1.png")}
               alt="AeroXchange"
               width={211}
               height={146}
-              className="w-full h-full object-contain"
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>
