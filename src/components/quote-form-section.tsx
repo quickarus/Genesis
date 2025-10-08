@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { getAssetPath } from '@/lib/utils'
 
 export default function QuoteFormSection() {
@@ -19,7 +22,13 @@ export default function QuoteFormSection() {
       <div className="absolute inset-0 bg-black/75" />
       
       {/* Quote Form */}
-      <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-5 p-4 sm:p-6 lg:p-10 w-full max-w-[600px] min-h-[500px] sm:min-h-[640px] bg-[#444444] border border-[#676767] rounded-xl shadow-[0px_4px_4px_rgba(0,0,0,0.5)] mx-4">
+      <motion.div 
+        className="relative z-10 flex flex-col items-center gap-4 sm:gap-5 p-4 sm:p-6 lg:p-10 w-full max-w-[600px] min-h-[500px] sm:min-h-[640px] bg-[#444444] border border-[#676767] rounded-xl shadow-[0px_4px_4px_rgba(0,0,0,0.5)] mx-4"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">Quote Request</h2>
         
         <div className="flex flex-col gap-4 sm:gap-5 w-full items-center">
@@ -79,7 +88,7 @@ export default function QuoteFormSection() {
             <span className="text-lg sm:text-xl font-medium text-white">Submit</span>
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

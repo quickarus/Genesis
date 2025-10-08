@@ -1,13 +1,28 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { getAssetPath } from '@/lib/utils'
 
 export default function TeamSection() {
   return (
-    <section id="about" className="flex flex-col items-center gap-8 sm:gap-12 py-12 sm:py-20 px-4 sm:px-8 lg:px-16 w-full max-w-7xl mx-auto bg-black pb-16 sm:pb-[32rem]">
-      <h2 className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center w-full mt-8 sm:mt-16">
+    <section id="about" className="flex flex-col items-center gap-8 sm:gap-12 py-12 sm:py-20 px-4 sm:px-8 lg:px-16 w-full max-w-7xl mx-auto bg-black pb-[20rem] sm:pb-[32rem]">
+      <motion.h2 
+        className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center w-full mt-8 sm:mt-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         Meet Our Team
-      </h2>
-      <div className="relative w-full">
+      </motion.h2>
+      <motion.div 
+        className="relative w-full"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      >
         <div className="w-full aspect-[1100/667] sm:max-w-[1100px] mx-auto rounded-lg overflow-hidden">
           <Image
             src={getAssetPath("/assets/images/ChatGPT Image Jun 27, 2025, 12_38_41 PM 1.jpg")}
@@ -31,7 +46,7 @@ export default function TeamSection() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

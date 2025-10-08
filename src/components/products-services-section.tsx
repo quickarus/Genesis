@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { getAssetPath } from '@/lib/utils'
 
 export default function ProductsServicesSection() {
@@ -51,29 +54,49 @@ export default function ProductsServicesSection() {
   ]
 
   return (
-    <section id="services" className="relative flex flex-col items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 lg:px-15 py-12 sm:py-20 w-full">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={getAssetPath("/assets/images/iStock-621838358.jpg")}
-          alt="iStock Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/75" />
-      </div>
+    <section 
+      id="services" 
+      className="relative flex flex-col items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 lg:px-15 py-12 sm:py-20 w-full overflow-hidden"
+    >
+      {/* Background Image - Fixed Layer */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${getAssetPath("/assets/images/iStock-621838358.jpg")})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          transform: 'translateZ(0)',
+          willChange: 'auto'
+        }}
+      />
+      
+      {/* Background Overlay */}
+      <div className="absolute inset-0 z-[1] bg-black/75" />
 
       {/* Content Container with Background */}
-      <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/60 backdrop-blur-sm rounded-lg p-4 sm:p-6 lg:p-10 mx-4">
+      <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/80 rounded-lg p-4 sm:p-6 lg:p-10 mx-4">
         <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-10 w-full">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center">
+          <motion.h2 
+            className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Our Products & Services
-          </h2>
+          </motion.h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
             {services.slice(0, 8).map((service, index) => (
-              <div key={service.id} className="flex flex-col gap-2 items-center">
+              <motion.div 
+                key={service.id} 
+                className="flex flex-col gap-2 items-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+              >
                 <div className="flex items-center gap-2.5 p-2.5 w-fit bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
                   <div className="w-7 h-7">
                     <Image
@@ -99,12 +122,18 @@ export default function ProductsServicesSection() {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Consulting (9th item) */}
-          <div className="flex flex-col gap-2 w-full max-w-[474px] items-center mx-auto">
+          <motion.div 
+            className="flex flex-col gap-2 w-full max-w-[474px] items-center mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+          >
             <div className="flex items-center gap-2.5 p-2.5 w-fit bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
               <div className="w-7 h-7">
                 <Image
@@ -130,10 +159,16 @@ export default function ProductsServicesSection() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* AeroXchange Logo */}
-          <div className="w-[150px] sm:w-[180px] lg:w-[211px] h-auto mt-4">
+          <motion.div 
+            className="w-[150px] sm:w-[180px] lg:w-[211px] h-auto mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.3, ease: "easeOut", delay: 0.9 }}
+          >
             <Image
               src={getAssetPath("/assets/images/Aeroxchange422x292_2 1.png")}
               alt="AeroXchange"
@@ -141,7 +176,7 @@ export default function ProductsServicesSection() {
               height={146}
               className="w-full h-auto object-contain"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

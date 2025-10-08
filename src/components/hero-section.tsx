@@ -1,12 +1,34 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { getAssetPath } from '@/lib/utils'
 
 export default function HeroSection() {
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Calculate parallax offset - move in opposite direction with multiplier
+  const parallaxOffset = scrollY * 0.5
+
   return (
     <section className="relative w-full h-[80vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-black overflow-hidden">
       {/* World Map Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="absolute top-[50px] sm:top-[100px] left-[-200px] sm:left-[-100px] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]">
+        <div 
+          className="absolute top-[50px] sm:top-[100px] left-[-400px] sm:left-[-300px] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]"
+          style={{
+            transform: `translateY(-${parallaxOffset}px)`
+          }}
+        >
           <Image
             src={getAssetPath("/assets/images/world.svg")}
             alt="World Map"
