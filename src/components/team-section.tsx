@@ -37,13 +37,13 @@ export default function TeamSection() {
           <div className="bg-[#444444]/70 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-lg">
             <div className="text-white space-y-3 sm:space-y-4 lg:space-y-6">
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                Genesis is a premier supplier in the commercial aviation industry. We specialize in inventory solutions to the worldwide aviation marketplace. With over 50 years combined experience in aircraft maintenance, finance solutions, and asset management, our team prides itself in our commitment to integrity, flexibility, and quality of work.
+                Genesis Aircraft Parts is a premier supplier in the commercial aviation industry. We specialize in inventory solutions to the worldwide aviation marketplace. With over 50 years combined experience in aircraft maintenance, finance solutions, and asset management, our team prides itself in our commitment to integrity, flexibility, and quality of work.
               </p>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
                 As an international service company, we work closely with our network of partners to meet a wide range of material requirements for customers. From simple parts transactions to highly intricate supply chain management programs, we are committed to providing practical business solutions that meet our customer needs.
               </p>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                We are a trusted partner in the commercial aerospace aftermarket for supply, purchase, exchange, lease, and repair management. We offer a direct link between your commercial aircraft and engine needs and innovative, cost effective, quality driven inventory solutions. At Genesis Aircraft our commitment is to you, the customer and is driven by integrity, technology and the highest quality standards.
+                We are a trusted partner in the commercial aerospace aftermarket for supply, purchase, exchange, lease, and repair management. We offer a direct link between your commercial aircraft and engine needs and innovative, cost effective, quality driven inventory solutions. At Genesis Aircraft Parts our commitment is to you, the customer and is driven by integrity, technology and the highest quality standards.
               </p>
             </div>
           </div>

@@ -81,13 +81,6 @@ export default function StatisticsSection() {
       hasComma: false
     },
     {
-      number: "2,000+", 
-      label: "Aircraft Supported",
-      value: 2000,
-      suffix: "+",
-      hasComma: true
-    },
-    {
       number: "50+",
       label: "Years Combined Experience",
       value: 50,
@@ -105,7 +98,7 @@ export default function StatisticsSection() {
 
   return (
     <section className="px-4 sm:px-8 lg:px-15 py-5 bg-black">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-10 px-4 sm:px-8 lg:px-15 py-10 max-w-screen-xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10 px-4 sm:px-8 lg:px-15 py-10 max-w-screen-xl mx-auto">
         {stats.map((stat, index) => (
           <div
             key={index}

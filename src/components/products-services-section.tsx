@@ -48,24 +48,6 @@ export default function ProductsServicesSection() {
       title: "APU Sales",
       id: "apu-sales",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      icon: getAssetPath("/icons/repair.svg"),
-      title: "Repair Management",
-      id: "repair-management",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      icon: getAssetPath("/icons/consulting.svg"),
-      title: "APU Fleet Management",
-      id: "apu-fleet",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      icon: getAssetPath("/icons/consignment.svg"),
-      title: "Consulting",
-      id: "consulting",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
 
@@ -78,7 +60,7 @@ export default function ProductsServicesSection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${getAssetPath("/assets/images/iStock-621838358.jpg")})`,
+          backgroundImage: `url('${getAssetPath("/assets/images/Engine Design with Cyan Details 1.jpg")}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -104,7 +86,7 @@ export default function ProductsServicesSection() {
           </motion.h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
-            {services.slice(0, 8).map((service, index) => (
+            {services.map((service, index) => (
               <motion.div 
                 key={service.id} 
                 className="flex flex-col gap-2 items-center"
@@ -157,57 +139,6 @@ export default function ProductsServicesSection() {
               </motion.div>
             ))}
           </div>
-
-          {/* Consulting (9th item) */}
-          <motion.div 
-            className="flex flex-col gap-2 w-full max-w-[474px] items-center mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-          >
-            <div className="flex items-center gap-2.5 p-2.5 w-fit bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
-              <div className="w-7 h-7">
-                <Image
-                  src={services[8].icon}
-                  alt={services[8].title}
-                  width={30}
-                  height={30}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <button 
-              onClick={() => toggleDropdown(services[8].id)}
-              className="flex items-center justify-between p-3 w-full bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-[20px] cursor-pointer hover:bg-black/75 transition-colors"
-            >
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-white">
-                {services[8].title}
-              </span>
-              <div className={`w-7 h-7 transition-transform duration-300 ${openDropdown === services[8].id ? 'rotate-180' : ''}`}>
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                  <path d="M6 9L12 15L18 9" stroke="#2D9ACF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-            </button>
-            <AnimatePresence>
-              {openDropdown === services[8].id && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="w-full overflow-hidden"
-                >
-                  <div className="p-4 bg-black/60 border-[0.5px] border-[#2D9ACF] backdrop-blur-[4px] rounded-lg">
-                    <p className="text-sm sm:text-base text-white leading-relaxed">
-                      {services[8].description}
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
 
           {/* AeroXchange Logo */}
           <motion.div 
