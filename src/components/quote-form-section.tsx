@@ -6,7 +6,7 @@ import { getAssetPath } from '@/lib/utils'
 
 export default function QuoteFormSection() {
   return (
-    <section id="quote" className="relative flex items-center justify-center gap-6 sm:gap-15 px-4 sm:px-8 lg:px-15 py-8 sm:py-12 lg:py-2.5 w-full min-h-[600px] sm:min-h-[734px] bg-black">
+    <section id="quote" className="relative flex items-center justify-center gap-6 sm:gap-15 px-4 sm:px-8 lg:px-16 py-12 sm:py-20 w-full min-h-[600px] sm:min-h-[734px] bg-black">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -36,7 +36,7 @@ export default function QuoteFormSection() {
             <input
               type="text"
               placeholder="Name"
-              className="w-full h-full px-4 bg-transparent text-[#999999] rounded-lg outline-none"
+              className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
@@ -44,7 +44,7 @@ export default function QuoteFormSection() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full h-full px-4 bg-transparent text-[#999999] rounded-lg outline-none"
+              className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
@@ -52,7 +52,7 @@ export default function QuoteFormSection() {
             <input
               type="tel"
               placeholder="Phone"
-              className="w-full h-full px-4 bg-transparent text-[#999999] rounded-lg outline-none"
+              className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
@@ -60,7 +60,7 @@ export default function QuoteFormSection() {
             <input
               type="text"
               placeholder="Company Name"
-              className="w-full h-full px-4 bg-transparent text-[#999999] rounded-lg outline-none"
+              className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
@@ -68,7 +68,7 @@ export default function QuoteFormSection() {
             <input
               type="text"
               placeholder="Aircraft Part Number"
-              className="w-full h-full px-4 bg-transparent text-[#999999] rounded-lg outline-none"
+              className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
