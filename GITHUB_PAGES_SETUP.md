@@ -76,6 +76,18 @@ npm run deploy
 - ✅ Parallax effects
 - ✅ Form interactions
 - ✅ All images and assets
+- ✅ Custom airplane cursor (cartoonish white plane design)
+
+## Custom Airplane Cursor
+
+The site features a custom airplane-shaped cursor that enhances the aviation theme:
+
+- **Design**: Cartoonish white airplane with rounded nose, wide wings, and flattened tail
+- **Default cursor**: White plane with subtle black outline for visibility
+- **Interactive elements**: Cyan-outlined plane for buttons, links, and form inputs
+- **Implementation**: SVG-based cursor defined in `src/app/globals.css`
+- **Cross-browser**: Works on all modern browsers that support custom cursors
+- **Fallback**: Gracefully falls back to default cursor if custom cursor isn't supported
 
 ## Important Notes
 

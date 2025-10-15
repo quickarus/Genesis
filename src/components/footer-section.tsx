@@ -8,6 +8,13 @@ export default function FooterSection() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 p-4 sm:p-5 w-full min-h-[240px] bg-black">
       {/* Contact Info Section */}
@@ -37,16 +44,38 @@ export default function FooterSection() {
       </div>
 
       {/* Navigation Section */}
-      <div className="flex flex-col gap-2 p-2.5 w-full h-auto items-center md:items-start">
+      <div className="flex flex-col gap-2 p-2.5 w-full h-auto items-center md:items-start md:mt-[67px]">
         <div className="text-base font-bold text-[#10BEF2]">Navigation</div>
-        <div className="text-base text-white">Home</div>
-        <div className="text-base text-white">About</div>
-        <div className="text-base text-white">Products & Services</div>
-        <div className="text-base text-white">Get Quote</div>
+        <button 
+          onClick={scrollToTop}
+          className="text-base text-white hover:text-[#10BEF2] transition-colors cursor-pointer"
+        >
+          Home
+        </button>
+        <button 
+          onClick={() => scrollToSection('about')}
+          className="text-base text-white hover:text-[#10BEF2] transition-colors cursor-pointer"
+        >
+          About
+        </button>
+        <button 
+          onClick={() => scrollToSection('services')}
+          className="text-base text-white hover:text-[#10BEF2] transition-colors cursor-pointer"
+        >
+          Products & Services
+        </button>
+        <button 
+          onClick={() => scrollToSection('quote')}
+          className="text-base text-white hover:text-[#10BEF2] transition-colors cursor-pointer"
+        >
+          Get Quote
+        </button>
       </div>
 
       {/* Newsletter Section */}
-      <div className="flex flex-col gap-3 p-2.5 w-full h-auto md:col-span-2 lg:col-span-1 items-center md:items-start">
+      <div className="flex flex-col gap-3 p-2.5 w-full h-auto md:col-span-2 lg:col-span-1 items-center md:items-start lg:mt-[67px]">
+        <div className="text-base text-white w-full max-w-[290px]">Sign up for our newsletter!</div>
+        
         <div className="flex items-center gap-2 w-full max-w-[320px]">
           <input
             type="email"
@@ -58,7 +87,6 @@ export default function FooterSection() {
           </button>
         </div>
         
-        <div className="text-base text-white w-full max-w-[290px]">Sign up for our newsletter!</div>
         <div className="text-base text-white">© Genesis Aircraft Parts 2025</div>
         
         <div className="flex items-center gap-2.5">
