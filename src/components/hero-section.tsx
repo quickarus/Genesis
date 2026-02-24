@@ -44,7 +44,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/75 z-[1]" />
       
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-3 sm:gap-5 p-4 sm:p-6 w-full max-w-[90vw] sm:max-w-[800px] h-[250px] sm:h-[300px] bg-[#444444]/70 backdrop-blur-[10px] border border-[#2D9ACF] rounded-[15px] mx-4">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-1 sm:gap-2 p-4 sm:p-6 w-full max-w-[90vw] sm:max-w-[800px] h-[250px] sm:h-[300px] bg-[#444444]/70 backdrop-blur-[10px] border border-[#2D9ACF] rounded-[15px] mx-4">
         <div className="w-full max-w-[400px] sm:max-w-[500px] h-[150px] sm:h-[200px] flex items-center justify-center">
           <Image
             src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
@@ -55,6 +55,9 @@ export default function HeroSection() {
             priority
           />
         </div>
+        <p className="text-white text-center text-sm sm:text-base font-semibold tracking-wide">
+          YOUR PREMIER PARTNER FOR ALL APU SOLUTIONS TO THE BOTTOM
+        </p>
       </div>
     </section>
   )

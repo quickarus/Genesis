@@ -14,7 +14,7 @@ export default function TeamSection() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Meet Our Team
+        About Us
       </motion.h2>
       <motion.div 
         className="w-full"
@@ -23,13 +23,13 @@ export default function TeamSection() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        <div className="w-full aspect-[1100/667] sm:max-w-[1100px] mx-auto rounded-lg overflow-hidden">
+        <div className="w-full sm:max-w-[1100px] mx-auto rounded-2xl overflow-hidden">
           <Image
-            src={getAssetPath("/assets/images/ChatGPT Image Jun 27, 2025, 12_38_41 PM 1.jpg")}
+            src={getAssetPath("/assets/images/Engine Design with Cyan Details 1.jpg")}
             alt="Genesis Aircraft Parts Team"
             width={1100}
             height={667}
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain"
             priority
           />
         </div>
