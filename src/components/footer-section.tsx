@@ -70,7 +70,7 @@ export default function FooterSection() {
           onClick={() => scrollToSection('services')}
           className="text-base text-white hover:text-[#10BEF2] transition-colors cursor-pointer"
         >
-          Products & Services
+          Services
         </button>
         <button 
           onClick={() => scrollToSection('quote')}

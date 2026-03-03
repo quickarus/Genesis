@@ -8,7 +8,7 @@ export default function TeamSection() {
   return (
     <section id="about" className="flex flex-col items-center gap-8 sm:gap-12 py-12 sm:py-20 px-4 sm:px-8 lg:px-16 w-full max-w-7xl mx-auto bg-black">
       <motion.h2 
-        className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center w-full mt-8 sm:mt-16"
+        className="text-2xl sm:text-3xl font-bold text-white text-center w-full mt-8 sm:mt-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}

@@ -64,13 +64,13 @@ export default function ProductsServicesSection() {
       <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/30 rounded-lg p-4 sm:p-6 lg:p-10 mx-4">
         <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-10 w-full">
           <motion.h2 
-            className="text-2xl sm:text-3xl font-bold text-[#10BEF2] text-center"
+            className="text-2xl sm:text-3xl font-bold text-white text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Our Products & Services
+            Services
           </motion.h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
