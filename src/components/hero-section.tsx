@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* World Map Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div 
-          className="absolute top-[50px] sm:top-[100px] left-[-400px] sm:left-[-300px] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]"
+          className="absolute top-[50px] sm:top-[100px] xl:top-auto xl:bottom-0 left-[-400px] sm:left-[-300px] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]"
           style={{
             transform: `translateY(-${parallaxOffset}px)`
           }}

@@ -67,20 +67,20 @@ export default function QuoteFormSection() {
   }
 
   return (
-    <section id="quote" className="relative flex items-center justify-center gap-6 sm:gap-15 px-4 sm:px-8 lg:px-16 py-12 sm:py-20 w-full min-h-[600px] sm:min-h-[734px] bg-black">
+    <section id="quote" className="relative flex items-center justify-center gap-6 sm:gap-15 px-4 sm:px-8 lg:px-16 py-12 sm:py-20 lg:py-28 xl:py-36 w-full min-h-[600px] sm:min-h-[734px] lg:min-h-[850px] xl:min-h-[1000px] bg-black">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src={getAssetPath("/assets/images/AdobeStock_5174723.png")}
-          alt="Aircraft in Sky"
+          src={getAssetPath("/assets/images/Gemini_Generated_Image_q12zvpq12zvpq12z.png")}
+          alt="Aircraft Background"
           width={1440}
           height={960}
-          className="absolute top-0 left-0 w-full h-full object-cover object-center"
+          className="absolute top-0 left-0 w-full h-full object-cover object-top"
         />
       </div>
       
       {/* Image Damper */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/45" />
       
       {/* Quote Form */}
       <motion.form 

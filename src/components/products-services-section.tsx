@@ -61,7 +61,7 @@ export default function ProductsServicesSection() {
       />
       
       {/* Background Overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/30" />
+      <div className="absolute inset-0 z-[1] bg-black/45" />
 
       {/* Content Container with Background */}
       <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/30 rounded-lg p-4 sm:p-6 lg:p-10 mx-4">
@@ -124,7 +124,7 @@ export default function ProductsServicesSection() {
             
             <motion.button
               onClick={() => setShowCertificate(true)}
-              className="text-sm font-bold text-white leading-[1.21] hover:text-[#10BEF2] transition-colors cursor-pointer"
+              className="text-sm font-bold text-white leading-[1.21] hover:text-[#10BEF2] transition-colors cursor-pointer underline"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
