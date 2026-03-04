@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ShoppingCart, Plane, Package, Network, Wrench, Building2 } from 'lucide-react'
 import { getAssetPath } from '@/lib/utils'
 
 export default function ProductsServicesSection() {
+  const [showCertificate, setShowCertificate] = useState(false)
+
   const services = [
     {
       icon: ShoppingCart,
@@ -70,7 +73,7 @@ export default function ProductsServicesSection() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Services
+            Products & Services
           </motion.h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
@@ -101,24 +104,63 @@ export default function ProductsServicesSection() {
             })}
           </div>
 
-          {/* AeroXchange Logo */}
-          <motion.div 
-            className="w-[150px] sm:w-[180px] lg:w-[211px] h-auto mt-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.3, ease: "easeOut", delay: 0.9 }}
-          >
-            <Image
-              src={getAssetPath("/assets/images/Aeroxchange422x292_2 1.png")}
-              alt="AeroXchange"
-              width={211}
-              height={146}
-              className="w-full h-auto object-contain"
-            />
-          </motion.div>
+          {/* AeroXchange Logo and ISO Certification */}
+          <div className="flex flex-col items-center justify-center gap-4 mt-4">
+            <motion.div 
+              className="w-[150px] sm:w-[180px] lg:w-[211px] h-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.9 }}
+            >
+              <Image
+                src={getAssetPath("/assets/images/Aeroxchange422x292_2 1.png")}
+                alt="AeroXchange"
+                width={211}
+                height={146}
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+            
+            <motion.button
+              onClick={() => setShowCertificate(true)}
+              className="text-sm font-bold text-white leading-[1.21] hover:text-[#10BEF2] transition-colors cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 1.0 }}
+            >
+              ISO-9001 Certified
+            </motion.button>
+          </div>
         </div>
       </div>
+
+      {/* Certificate Modal/Overlay */}
+      {showCertificate && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setShowCertificate(false)}
+        >
+          <div 
+            className="relative w-full max-w-5xl h-[90vh] bg-white rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowCertificate(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <iframe
+              src={getAssetPath("/assets/images/GAP-2024-ISO-9001-CERTIFICATE OF ACCREDIDATION-.pdf")}
+              className="w-full h-full"
+              title="ISO-9001 Certificate"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

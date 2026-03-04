@@ -57,7 +57,7 @@ export default function Header() {
             onClick={() => scrollToSection('services')}
             className="px-4 py-2 rounded-lg text-white font-medium text-base lg:text-lg hover:bg-white/10 transition-colors"
           >
-            Services
+            Products & Services
           </button>
           <button 
             onClick={() => scrollToSection('about')}
@@ -95,12 +95,12 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden">
           <nav className="flex flex-col items-center gap-4 py-6">
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="px-4 py-2 rounded-lg text-white font-medium text-lg hover:bg-white/10 transition-colors w-full max-w-xs text-center"
-            >
-              Services
-            </button>
+              <button 
+                onClick={() => scrollToSection('services')}
+                className="px-4 py-2 rounded-lg text-white font-medium text-lg hover:bg-white/10 transition-colors w-full max-w-xs text-center"
+              >
+                Products & Services
+              </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="px-4 py-2 rounded-lg text-white font-medium text-lg hover:bg-white/10 transition-colors w-full max-w-xs text-center"
