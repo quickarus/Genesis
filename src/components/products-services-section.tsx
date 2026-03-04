@@ -51,7 +51,7 @@ export default function ProductsServicesSection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('${getAssetPath("/assets/images/7cfe5b5d-0b75-407c-a391-05b64a65bedb.png")}')`,
+          backgroundImage: `url('${getAssetPath("/assets/images/Gemini_Generated_Image_m098j4m098j4m098.png")}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'left center',
           backgroundRepeat: 'no-repeat',
@@ -61,7 +61,7 @@ export default function ProductsServicesSection() {
       />
       
       {/* Background Overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/75" />
+      <div className="absolute inset-0 z-[1] bg-black/30" />
 
       {/* Content Container with Background */}
       <div className="relative z-10 w-full max-w-[1200px] bg-[#666666]/30 rounded-lg p-4 sm:p-6 lg:p-10 mx-4">

@@ -97,8 +97,8 @@ export default function StatisticsSection() {
   ]
 
   return (
-    <section className="px-4 sm:px-8 lg:px-15 py-5 bg-black">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-10 px-4 sm:px-8 lg:px-15 py-10 max-w-screen-xl mx-auto">
+    <section className="px-4 sm:px-8 lg:px-15 py-1 bg-black">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-10 px-4 sm:px-8 lg:px-15 py-5 max-w-screen-xl mx-auto">
         {stats.map((stat, index) => (
           <div
             key={index}
