@@ -109,7 +109,7 @@ export default function StatisticsSection() {
               suffix={stat.suffix}
               hasComma={stat.hasComma}
             />
-            <div className="text-sm sm:text-sm lg:text-lg font-bold text-white text-center whitespace-nowrap">
+            <div className="text-sm sm:text-sm lg:text-lg font-bold text-white text-center sm:whitespace-normal lg:whitespace-nowrap">
               {stat.label}
             </div>
           </div>
