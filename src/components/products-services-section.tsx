@@ -51,8 +51,8 @@ export default function ProductsServicesSection() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('${getAssetPath("/assets/images/genesis-aircraft.png")}')`,
-          backgroundSize: 'cover',
+          backgroundImage: `url('${getAssetPath("/assets/images/GETTING YOU OFF THE GROUND 1.png")}')`,
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           transform: 'translateZ(0)',

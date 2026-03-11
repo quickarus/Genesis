@@ -13,6 +13,7 @@ export default function QuoteFormSection() {
     company: '',
     partNumber: ''
   })
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -22,6 +23,15 @@ export default function QuoteFormSection() {
       ...formData,
       [e.target.name]: e.target.value
     })
+  }
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    setTouched(prev => ({ ...prev, [e.target.name]: true }))
+  }
+
+  function inputWrapperClass(field: string) {
+    const hasError = touched[field] && !formData[field as keyof typeof formData].trim()
+    return `w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center border-2 transition-colors ${hasError ? 'border-red-500' : 'border-transparent'}`
   }
 
   const handleCaptchaChange = (token: string | null) => {
@@ -94,59 +104,67 @@ export default function QuoteFormSection() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white text-center">Quote Request</h2>
         
         <div className="flex flex-col gap-4 sm:gap-5 w-full items-center">
-          <div className="w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
+          <div className={inputWrapperClass('name')}>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Name"
               required
               className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
-          <div className="w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
+          <div className={inputWrapperClass('email')}>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Email"
               required
               className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
-          <div className="w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
+          <div className={inputWrapperClass('phone')}>
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Phone"
+              required
               className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
-          <div className="w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
+          <div className={inputWrapperClass('company')}>
             <input
               type="text"
               name="company"
               value={formData.company}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Company Name"
+              required
               className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
           
-          <div className="w-full max-w-[520px] h-12 bg-[#F2F2F2] rounded-lg flex items-center">
+          <div className={inputWrapperClass('partNumber')}>
             <input
               type="text"
               name="partNumber"
               value={formData.partNumber}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Aircraft Part Number"
+              required
               className="w-full h-full px-4 bg-transparent text-[#333333] placeholder:text-[#999999] rounded-lg outline-none"
             />
           </div>
