@@ -43,7 +43,7 @@ export default function TeamSection() {
                 As an international service company, we work closely with our network of partners to meet a wide range of material requirements for customers. From simple parts transactions to highly intricate supply chain management programs, we are committed to providing practical business solutions that meet our customer needs.
               </p>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                We are a trusted partner in the commercial aerospace aftermarket for supply, purchase, exchange, lease, and repair management. We offer a direct link between your commercial aircraft and engine needs and innovative, cost effective, quality driven inventory solutions. At Genesis Aircraft Parts our commitment is to you, the customer and is driven by integrity, technology and the highest quality standards.
+                We are a trusted partner in the commercial aerospace aftermarket for supply, purchase, exchange, lease, and repair management. We offer a direct link between your commercial aircraft and engine needs and innovative, cost effective, quality driven inventory solutions. At Genesis Aircraft Parts, our commitment is to you—THE CUSTOMER—and is built on strong communication and a relentless focus on customer satisfaction and the highest quality standards.
               </p>
             </div>
           </div>

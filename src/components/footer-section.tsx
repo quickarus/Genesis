@@ -80,25 +80,12 @@ export default function FooterSection() {
         </button>
       </div>
 
-      {/* Newsletter Section */}
+      {/* Copyright Section */}
       <div className="flex flex-col gap-3 p-2.5 w-full h-auto items-center md:items-start md:mt-[67px]">
-        <div className="text-base text-white">Sign up for our newsletter!</div>
-        
-        <div className="flex items-center gap-2 w-full">
-          <input
-            type="email"
-            placeholder="Email"
-            className="flex-1 h-10 px-4 bg-white text-sm text-gray-800 placeholder-[#999999] rounded-lg outline-none min-w-0"
-          />
-          <button className="px-3 h-10 bg-[#2D9ACF] text-white text-sm font-medium rounded-lg hover:bg-[#2D9ACF]/90 transition-colors whitespace-nowrap flex-shrink-0">
-            Sign Up
-          </button>
-        </div>
-        
         <div className="text-base text-white">© Genesis Aircraft Parts 2025</div>
         
-        <div className="flex items-center gap-2.5">
-          <div className="text-base text-white">Created by Menes</div>
+        <a href="https://quickarus.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+          <span className="text-base text-white underline">Created by Menes</span>
           <div className="w-7 h-7">
             <Image
               src={getAssetPath("/assets/logos/Menes_Logo.png")}
@@ -108,7 +95,7 @@ export default function FooterSection() {
               className="w-full h-full object-contain"
             />
           </div>
-        </div>
+        </a>
       </div>
 
       {/* Certificate Modal/Overlay */}

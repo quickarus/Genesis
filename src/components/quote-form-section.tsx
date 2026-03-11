@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { getAssetPath } from '@/lib/utils'
@@ -68,13 +67,14 @@ export default function QuoteFormSection() {
 
   return (
     <section id="quote" className="relative flex items-center justify-center gap-6 sm:gap-15 px-4 sm:px-8 lg:px-16 py-12 sm:py-20 lg:py-28 xl:py-36 w-full min-h-[600px] sm:min-h-[734px] lg:min-h-[850px] xl:min-h-[1000px] bg-black">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={getAssetPath("/assets/images/Gemini_Generated_Image_q12zvpq12zvpq12z.png")}
-          alt="Aircraft Background"
-          width={1440}
-          height={960}
+      {/* Background Video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          src={getAssetPath("/assets/images/AdobeStock_1756726183.mov")}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute top-0 left-0 w-full h-full object-cover object-top"
         />
       </div>

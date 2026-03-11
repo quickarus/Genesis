@@ -30,7 +30,7 @@ export default function ApuSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="text-sm sm:text-base lg:text-lg font-medium text-white leading-[1.4] sm:leading-[1.33] text-center">
-          At Genesis Aircraft Parts, we specialize in the purchase, sale, lease, and teardown of Auxiliary Power Units (APUs). Whether you're looking to sell surplus APUs, acquire high-quality units, secure lease options, or source teardown components, our team delivers reliable, cost-effective solutions tailored to your operational needs. Backed by a commitment to quality, integrity, and industry expertise, Genesis Aircraft Parts is your go-to partner for all things APU.
+          At Genesis Aircraft Parts, we specialize in the purchase, sale, lease, and teardown of Auxiliary Power Units (APUs). Whether you need APU piece‑part support or whole asset support, Genesis Aircraft Parts offers serviceable APU's that are available for sale, lease, or flat‑rate exchange—our team delivers reliable, cost‑effective solutions tailored to your operational needs. Driven by strong communication, customer satisfaction, and industry expertise, Genesis Aircraft Parts is your trusted partner for all APU solutions.
         </div>
       </motion.div>
     </section>

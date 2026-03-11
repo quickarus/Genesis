@@ -20,11 +20,11 @@ export default function HeroSection() {
   const parallaxOffset = scrollY * 0.5
 
   return (
-    <section className="relative w-full h-[80vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-black overflow-hidden">
+    <section className="relative w-full h-[80vh] xl:h-[70vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-black overflow-hidden">
       {/* World Map Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div 
-          className="absolute top-[50px] sm:top-[100px] xl:top-auto xl:bottom-0 left-[-400px] sm:left-[-300px] min-[2000px]:left-[calc(50%-1250px)] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]"
+          className="absolute top-[50px] sm:top-[100px] xl:top-[76px] left-[-400px] sm:left-[-300px] min-[2000px]:left-[calc(50%-1250px)] w-[2000px] sm:w-[2500px] h-[600px] sm:h-[857px]"
           style={{
             transform: `translateY(-${parallaxOffset}px)`
           }}

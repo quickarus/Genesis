@@ -65,7 +65,7 @@ function CountUpNumber({ end, suffix, hasComma, duration = 2000 }: CountUpNumber
   }
 
   return (
-    <div ref={elementRef} className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#10BEF2]">
+    <div ref={elementRef} className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#10BEF2] drop-shadow-[0_0_1px_rgba(0,0,0,0.6)]" style={{ WebkitTextStroke: '0.5px #333333', paintOrder: 'stroke fill' }}>
       {formatNumber(count)}{suffix}
     </div>
   )
