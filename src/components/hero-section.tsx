@@ -45,17 +45,14 @@ export default function HeroSection() {
       
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center gap-1 sm:gap-2 p-4 sm:p-6 w-full max-w-[90vw] sm:max-w-[800px] h-[250px] sm:h-[300px] bg-[#444444]/70 backdrop-blur-[10px] border border-[#2D9ACF] rounded-[15px] mx-4">
-        <div className="w-full max-w-[400px] sm:max-w-[500px] h-[150px] sm:h-[200px] flex items-center justify-center">
-          <Image
-            src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
+        <div className="w-full flex items-center justify-center">
+          <img
+            src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
             alt="Genesis Aircraft Parts"
-            width={400}
-            height={120}
-            className="object-contain max-w-full max-h-full"
-            priority
+            style={{ maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
           />
         </div>
-        <p className="text-white text-center text-sm sm:text-base font-semibold tracking-wide">
+        <p className="text-white text-center text-sm sm:text-base font-semibold tracking-wide mt-4 sm:mt-6">
           YOUR PREMIER PARTNER FOR ALL APU SOLUTIONS TO THE BOTTOM
         </p>
       </div>

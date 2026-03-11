@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { getAssetPath } from '@/lib/utils'
 
 export default function Header() {
@@ -35,19 +34,17 @@ export default function Header() {
   return (
     <div className="bg-black/10 backdrop-blur-sm">
       {/* Header Bar */}
-      <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-5 max-w-screen-xl mx-auto relative">
+      <div className="flex items-center justify-between px-2 py-0 w-full relative">
         {/* Logo - appears when scrolled */}
         <button
           onClick={scrollToTop}
           className={`transition-opacity duration-300 ${showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'} flex-shrink-0 cursor-pointer hover:opacity-80 transition-all`}
           aria-label="Back to top"
         >
-          <Image
-            src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
+          <img
+            src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
             alt="Genesis Aircraft Parts"
-            width={150}
-            height={45}
-            className="h-8 sm:h-10 w-auto object-contain"
+            style={{ height: '60px', width: 'auto' }}
           />
         </button>
 
@@ -74,7 +71,7 @@ export default function Header() {
         </nav>
 
         {/* Spacer to balance layout when logo is visible */}
-        <div className={`transition-opacity duration-300 ${showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'} flex-shrink-0 w-[150px] hidden md:block`} />
+        <div className={`transition-opacity duration-300 ${showLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'} flex-shrink-0 w-[300px] hidden md:block`} />
 
         {/* Spacer for mobile to balance layout */}
         <div className="md:hidden flex-1" />

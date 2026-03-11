@@ -24,15 +24,13 @@ export default function FooterSection() {
       <div className="flex flex-col gap-2 p-2.5 w-full h-auto justify-between items-center md:items-start">
         <button 
           onClick={scrollToTop}
-          className="w-[196px] h-auto cursor-pointer hover:opacity-80 transition-opacity"
+          className="h-auto cursor-pointer hover:opacity-80 transition-opacity"
           aria-label="Back to top"
         >
-          <Image
-            src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
+          <img
+            src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
             alt="Genesis Aircraft Parts"
-            width={196}
-            height={59}
-            className="w-full h-auto object-contain"
+            style={{ width: '196px', height: 'auto' }}
           />
         </button>
 
