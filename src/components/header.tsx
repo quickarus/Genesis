@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <div className="bg-black/10 backdrop-blur-sm">
       {/* Header Bar */}
-      <div className="flex items-center justify-between px-2 py-0 w-full relative">
+      <div className="flex items-center justify-between px-2 py-2 w-full relative">
         {/* Logo - appears when scrolled */}
         <button
           onClick={scrollToTop}
@@ -42,7 +42,7 @@ export default function Header() {
           aria-label="Back to top"
         >
           <img
-            src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
+            src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
             alt="Genesis Aircraft Parts"
             style={{ height: '60px', width: 'auto' }}
           />

@@ -49,11 +49,11 @@ export default function HeroSection() {
           <img
             src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
             alt="Genesis Aircraft Parts"
-            style={{ maxWidth: '100%', maxHeight: '180px', width: 'auto', height: 'auto' }}
+            style={{ maxWidth: '100%', maxHeight: '150px', width: 'auto', height: 'auto' }}
           />
         </div>
         <p className="text-white text-center text-sm sm:text-base font-semibold tracking-wide mt-4 sm:mt-6">
-          YOUR PREMIER PARTNER FOR ALL APU SOLUTIONS TO THE BOTTOM
+          YOUR PREMIER PARTNER FOR ALL APU SOLUTIONS
         </p>
       </div>
     </section>

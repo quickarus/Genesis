@@ -28,9 +28,9 @@ export default function FooterSection() {
           aria-label="Back to top"
         >
           <img
-            src={getAssetPath("/assets/logos/GenesisGYOTGLOGO.png")}
+            src={getAssetPath("/assets/logos/white-logo-rec (1).png")}
             alt="Genesis Aircraft Parts"
-            style={{ width: '196px', height: 'auto' }}
+            style={{ width: '280px', height: 'auto' }}
           />
         </button>
 
