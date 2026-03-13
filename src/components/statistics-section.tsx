@@ -74,21 +74,18 @@ function CountUpNumber({ end, suffix, hasComma, duration = 2000 }: CountUpNumber
 export default function StatisticsSection() {
   const stats = [
     {
-      number: "500+",
       label: "APU's Processed",
       value: 500,
       suffix: "+",
       hasComma: false
     },
     {
-      number: "50+",
       label: "Years Combined Experience",
       value: 50,
       suffix: "+",
       hasComma: false
     },
     {
-      number: "375+",
       label: "Global Partners",
       value: 375,
       suffix: "+",

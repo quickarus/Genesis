@@ -1,7 +1,6 @@
 import Header from '@/components/header'
 import HeroSection from '@/components/hero-section'
 import StatisticsSection from '@/components/statistics-section'
-import AboutSection from '@/components/about-section'
 import TeamSection from '@/components/team-section'
 import ProductsServicesSection from '@/components/products-services-section'
 import ApuSection from '@/components/apu-section'
@@ -18,7 +17,6 @@ export default function Home() {
         <HeroSection />
         <StatisticsSection />
         <ApuSection />
-        <AboutSection />
         <ProductsServicesSection />
         <TeamSection />
         <QuoteFormSection />

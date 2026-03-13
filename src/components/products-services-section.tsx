@@ -48,17 +48,17 @@ export default function ProductsServicesSection() {
       className="relative flex flex-col items-center justify-center gap-6 sm:gap-10 px-4 sm:px-8 lg:px-15 py-12 sm:py-20 w-full overflow-hidden"
     >
       {/* Background Image - Fixed Layer */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('${getAssetPath("/assets/images/GETTING YOU OFF THE GROUND.png")}')`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          transform: 'translateZ(0)',
-          willChange: 'auto'
-        }}
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={getAssetPath("/assets/images/GYOTGPlane.png")}
+          alt="Products and Services Background"
+          fill
+          className="object-contain"
+          quality={100}
+          sizes="100vw"
+          priority
+        />
+      </div>
       
       {/* Background Overlay */}
       <div className="absolute inset-0 z-[1] bg-black/45" />
@@ -114,7 +114,7 @@ export default function ProductsServicesSection() {
               transition={{ duration: 0.3, ease: "easeOut", delay: 0.9 }}
             >
               <Image
-                src={getAssetPath("/assets/images/Aeroxchange422x292_2 1.png")}
+                src={getAssetPath("/assets/logos/Aeroxchange422x292_2 1.png")}
                 alt="AeroXchange"
                 width={211}
                 height={146}
